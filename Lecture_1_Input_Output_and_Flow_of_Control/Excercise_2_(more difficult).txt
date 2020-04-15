@@ -1,0 +1,62 @@
+(More difficult.) Alter your program from question 1 so that it deals with months as well as years,
+and produces output such as the following:
+
+		Enter the current year then press RETURN.
+
+		1996
+
+		Enter the current month (a number from 1 to 12).
+
+		10
+
+		Enter your current age in years.
+
+		36
+
+		Enter the month in which you were born (a number from 1 to 12).
+
+		5
+
+		Enter the year for which you wish to know your age.
+
+		2001
+
+		Enter the month in this year.
+
+		6
+
+		Your age in 6/2001: 41 years and 1 month.
+
+The program should cope with singulars and plurals properly in the output, e.g. "1 month" but "2 months".
+
+Hints: you will have to introduce extra variables in the variable declaration,
+and may find the following arithmetical operations useful:
+
+Symbol   Operation       Example     Value
+
++        Addition        3 + 5       8
+
+-        Subtraction     43 - 25     18
+
+*        Multiplication  4 * 7       28
+
+/        Division        9 / 2       4
+
+%        Modulus         20 % 6      2
+
+(Notice that when the division sign "/" is used with two integers, it returns an integer.)
+You may also want to use the following comparison operators:
+
+Symbol   Meaning                    Example    Value
+
+<        less than                  3 < 5      TRUE
+
+<=       less than or equal to      43 <= 25   FALSE
+
+>        greater than               4 > 7      FALSE
+
+>=       greater than or equal to   9 >= 2     TRUE
+
+==       equal to                   20 == 6    FALSE
+
+!=       not equal to               20 != 6    TRUE
