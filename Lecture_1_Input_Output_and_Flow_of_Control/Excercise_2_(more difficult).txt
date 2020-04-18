@@ -29,7 +29,7 @@ and produces output such as the following:
 
 The program should cope with singulars and plurals properly in the output, e.g. "1 month" but "2 months".
 
-Hints: you will have to introduce extra variables in the variable declaration,
+Hints: you will have to introduce extra variables,
 and may find the following arithmetical operations useful:
 
 Symbol   Operation       Example     Value

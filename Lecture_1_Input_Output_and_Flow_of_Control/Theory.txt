@@ -3,12 +3,13 @@ The file AgeCalculator.py contains an example python program
 that demonstrates how one can read information from the keyboard and then print
 information to the computer screen. The last couple of lines also demonstrate how
 an if statement works. You can see how a coder can build logical structures in his
-programs.
+programs. To start with you should run the AgeCalculator.py file to see what it does
+and then look at the code.
 
 ### Running the program ###
 Try to use the terminal to run all of your code
 Simply navigate into the folder of the file you want to run
-using the "cd" command and execute [name_of_program].py on the command to
+using the "cd" command and execute [name_of_program].py on the command line to
 run the file.
 
 ### In and output ###
@@ -38,10 +39,10 @@ else:
   ...
   StatementN+M
 
-The image "if_statement" shows how an if statement works. The computer eveluates
+The image "if_statement" shows how an if statement works. The computer evaluates
 the conditions you have give one after another and as soon as one of them is true
 proceeds to execute the statements you have written in the body of the condition.
-It only every executes one branch. In my mind the if statement is precisely where
+It only ever executes one branch. In my mind the if statement is precisely where
 the capabilities of Excel stop.
 
 It is quite common to see if statements strung together in programs, as follows:
