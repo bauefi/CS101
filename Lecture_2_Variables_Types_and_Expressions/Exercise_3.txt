@@ -1,0 +1,14 @@
+### Exercise 3 ###
+Write a program which will raise any number x to a positive power n
+using a "for loop". (Is there any way to improve the efficiency of
+your program?)
+
+The program should read in the number the user wants to use and the power
+to which it should be raised. Like so:
+
+  This program raises a number x to a non-negative integer power n
+  Please enter a number:
+  10
+  To what power would you like to raise it?
+  2
+  The number 10 raised to the power 2 is 100

@@ -1,0 +1,113 @@
+### 2.1. Identifiers ###
+As we have seen, Python programs can be written using many English words.
+It is useful to think of words found in a program as being one of three types:
+
+  1 Reserved words
+  These are words such as if, elif and else, which have a predefined meaning
+  that cannot be changed.
+
+  2. Library identifiers
+  These words are supplied default meanings by the programming environment,
+  and should only have their meanings changed if the programmer has strong
+  reasons for doing so.
+
+  3. Programmer-supplied Identifiers. These words are "created" by the programmer,
+  and are typically variable names, such as year_now and another_age.
+
+### 2.2 Data Types ###
+Python is a dynamically typed programming language which means that the
+type of your variables is checked at run-time. This means that you do
+not have to specify the type of your variables. The computer infers
+the type when you execute the program. For example if you assign a new
+variable like this:
+
+x = 2
+
+In this example the computer checks that the number 2 has no decimal point
+and stores x as an integer. This makes writing code easier, however sometimes
+you might loose track of the types of your variables. In statically typed
+languages like c++ you have to tell the computer of what type your variables are
+like so:
+
+int x = 2
+
+Below is a list of different common data types available in Python
+
+  1. String (str)
+  This type is used to represent text
+  x = "Hello World"
+
+  2. Integer (int)
+  Integers are used to store whole numbers
+  x = 2
+
+  3. Float (float)
+  Floats are used to store real numbers
+  x = 2.5
+
+  4. Boolean (bool)
+  Booleans can store either True or False
+  x = True
+
+  5. List
+  Lists can store multiple elements of arbitrary types (int, float, str, ...)
+  x = ["apple", "banana", "cherry"]
+  The different elements of a list can be indexed like so
+  x[1] will return "banana"
+
+  6. Tuple (tuple)
+  A tuple is an immutable sequence of Python objects. They are sequences like
+  lists. The difference between tuples and lists is that tuples can not be changed
+  x = ("apple", "banana", "cherry")
+
+  7. Dictionary (dict)
+  Dictionaries are used to store key-value pairs.
+  Dictionaries are unordered, changeable and indexed. The keys in a dictionary are unique.
+  x = {"name" : "John", "age" : 36}
+  We can retrieve the value associated with the key "name" as follows:
+  x["name"] will return "John"
+
+### 2.4. Shorthand Arithmetic Assignment Statements ###
+We have already seen how programs can include variable assignments such as
+
+number = number + 1;
+
+Very often variables are assigned a new value as function of their old value.
+Hence, Python offers a shorter and more convenient syntax for this.
+Any of the operators "+" (addition), "-" (subtraction), "*" (multiplication),
+"/" (division) and "%" (modulus) can be prefixed to the assignment operator (=),
+as in the following examples:
+
+  Example:                      Equivalent to:
+  number += 1                   number = number + 1;
+  total -= discount             total = total - discount;
+  bonus *= 2                    bonus = bonus * 2
+  time /= rush_factor           time = time / rush_factor;
+  change %= 100                 change = change % 100;
+  amount *= count1 + count2     amount = amount * (count1 + count2);
+
+### 2.5. Boolean Expressions and Operators ###
+Intuitively, we think of expressions such as "2 < 7", "1.2 != 3.7" and "6 >= 9"
+as evaluating to "True" or "False" ("!=" means "not equal to").
+Such expressions can be combined using the logical operators "and", "or" and "not"
+as in the following examples:
+
+  Expression:                             Result:
+  (6 <= 6) and (5 < 3)                    False
+  (6 <= 6) or (5 < 3)                     True
+  (5 != 6)                                True
+  (5 < 3) and (6 <= 6) or (5 != 6)        True
+  (5 < 3) and ((6 <= 6) or (5 != 6))      False
+  !((5 < 3) and ((6 <= 6) or (5 != 6)))   True
+
+The fourth example is true because the "and" operator has higher precendence
+than the "or" operator
+
+Compound Boolean expressions are typically used as the condition in "if statements"
+and "for loops". For example:
+	...
+	...
+	if total_test_score >= 50 and total_test_score < 65:
+    print("You have just scraped through the test.")
+	...
+	...

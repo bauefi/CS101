@@ -1,0 +1,16 @@
+### Excercise 1 ###
+To convert temperatures written in Fahrenheit to Celsius (Centigrade),
+you subtract 32, multiply by 5 and then divide by 9.
+To convert Celsius to Absolute Value (Kelvin),
+you add 273.15.
+
+Write a program that displays a temperature conversion chart on the screen
+as follows:
+
+Fahrenheit     Celsius        Absolute Value
+0              -17.78         255.37
+20             -6.67          266.48
+40             4.44           277.59
+...            ......         ......
+...            ......         ......
+300            148.89         422.04

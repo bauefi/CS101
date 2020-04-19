@@ -1,0 +1,7 @@
+### Exercise 2 ###
+Alter the program for question 1 so that it prompts the user for the lowest
+and highest Fahrenheit temperature wanted in the table,
+and also prompts the user for the desired step size between rows of the table
+(the step size is 20 in question 1). The program should begin by explaining
+to the user what it does, and should appropriately echo the user's input
+before printing the table.
