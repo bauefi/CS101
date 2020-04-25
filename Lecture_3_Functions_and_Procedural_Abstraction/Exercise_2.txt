@@ -1,0 +1,5 @@
+Exercise 2
+
+Split your answer to Exercise 1 into two files
+Main.py --> Containing the main code of your program
+Functions.py --> Containing all user defined functions you are using

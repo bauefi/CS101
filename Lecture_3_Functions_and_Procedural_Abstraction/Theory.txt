@@ -1,0 +1,155 @@
+### 3.1. The need for Sub-programs ###
+A natural way to solve large problems is to break them down into a series of
+sub-problems, which can be solved more-or-less independently and then combined
+to arrive at a complete solution. In programming, this methodology reflects
+itself in the use of sub-programs.
+
+We have already been using sub-programs. For example, in the program which
+generated a table of square roots, we used the following "for loop":
+
+	...
+	import math
+	...
+	...
+  for number in range(0, 10):
+    print(math.sqrt(number))
+	...
+	...
+
+The function "sqrt(...)" is defined in a sub-program accessed via the library
+math, which we import into our main program. The sub-program takes "number",
+uses a particular algorithm to compute its square root, and then returns the
+computed value back to the program. We don't care what the algorithm is as long
+as it gives the correct result. It would be ridiculous to have to explicitly
+(and perhaps repeatedly) include this algorithm in our "main" program.
+
+In this chapter we will discuss how the programmer can define his or her own
+functions (sub programs). At first, we will put these functions in the same
+file as our main code. Later we will see how to place different functions in
+different files.
+
+### 3.2 User-defined Functions ###
+A function encapsulates a series of statements which is executed as soon as the
+function is called (used by another program).
+
+Example.py shows a trivial example of a program which includes a user defined
+function, in this case called "area(...)". The program computes the area
+of a rectangle of given length and width. Take a look at Example.py before
+you continue reading this. It serves to illustrate a number of
+features concerning functions:
+
+ -In python functions are defined with the following syntax:
+
+    def function_name(parameter_1, parameter_2, ...):
+        Statement_1
+        ...
+        ...
+        ...
+        Statement_N
+
+ - A function definition has the same structure as the main programs we have
+   written before. It has its own variable declarations and program statements.
+
+ - The programmer can give input data to a function through its parameters.
+   A function can have a list of zero or more parameters inside its brackets,
+   each of which can be of a different data type. The function parameters are available
+   as variables inside the function body.
+
+ - A function has its own scope which means that the variables inside a function
+   can not be accessed from the outside. Also inside the function you can not
+   access any variables outside of it, except for the parameters passed to the function.
+   Furthermore, when a function returns all variables that were declared inside
+   the function body are deleted and are no longer available anywhere.
+
+ - All functions need to be defined before they are called (used). Hence, the
+   function area(...) is defined at the top of Example.py before it is called
+   by the main program.
+
+ - A function can return a value or not return anything at all.
+
+ - A function may have more than one "return" statement, in which case the function
+   definition will end execution as soon as the first "return" is reached.
+   For example:
+
+      def absolute_value(number):
+        if number >= 0:
+          return number
+        else:
+          return -number
+
+To clarify these points the following describes the flow of Execution of
+Example.py
+
+Line 14: The main program reads user input for the variable "this_length"
+Line 15: The main program reads user input for the variable "this_width"
+Line 16: The main program calls the function "area(...)"
+         "this_length" and "this_width" are passed as parameters to "area(...)"
+
+Line 4: The computer starts executing the sub program encapsulated in the function "area(...)"
+Line 5: The parameters of "area(...)" are multiplied and the result is assigned to
+        the new variable "area" inside the function body.
+Line 6: The function "area(...)" returns the variable "area"
+
+Line 16: The computer jumps back to the main program and assigns the returned value
+         to "this_area"
+Line 18: The result of the program is printed to the screen
+
+### 3.3 How are parameters passed to a function? ###
+In programming we usually pass a parameter to a function either by value or by reference.
+What does that mean?
+
+  Pass by value
+  When calling a function the variable you want to pass to it is copied. Then the
+  computer gives that copy to the called function. This means that you can do whatever
+  you want with that variable inside the function body without changing the variable
+  outside the function.
+
+  Pass by reference
+  When calling a function the computer gives the function a reference to the variable
+  you want to pass. This basically means you tell the function where on your computers
+  memory it can find the variable you are passing. Now there is no copy. Anything you do
+  to the passed parameter inside your function you are doing to the variable outside of the
+  function.
+
+Python implements sort of a mix of these two concepts which they call
+"Pass-by-object-reference". For now don't worry about what exactly that means.
+If you really care you can take a look at this article:
+
+https://medium.com/@lokeshsharma596/is-python-call-by-value-or-call-by-reference-2dd7db74dbd0
+
+Just remember the following which is sort of correct and is sufficient for writing
+correct code.
+
+If you pass an immutable object (can not be modified)
+  int, float, complex, string, tuple, bytes.
+  It behaves like pass by value
+
+If you pass a mutable object (can be modified)
+  list, dict, set, byte array
+  It behaves like pass by reference
+
+### 3.4. Procedural Abstraction and Good Programming Style ###
+One of the main purposes of using functions is to aid in the top down design of
+programs. During the design stage, as a problem is subdivided into tasks
+(and then into sub-tasks, sub-sub-tasks, etc.), the problem solver (programmer)
+should have to consider only what a function is to do and not be concerned about
+the details of the function. The function name and comments at the beginning of
+the function should be sufficient to inform the user as to what the function does.
+(Indeed, during the early stages of program development, experienced programmers
+often use simple "dummy" functions or stubs, which simply return an arbitrary
+value of the correct type, to test out the control flow of the main or higher
+level program component.)
+
+Developing functions in this manner is referred to as functional or procedural
+abstraction. This process is aided by the use of value parameters and local
+variables declared within the body of a function. Functions written in this
+manner can be regarded as "black boxes". As users of the function, we neither
+know nor care why they work.
+
+### 3.5. Splitting Programs into Different Files ###
+To make our codebase clearer and more manageable we want to split our program
+into different files.
+
+The files Main.py and Area.py contain the same code as Example.py. They show how
+to split the area function into a separate file (Area.py) and then import it into
+the main file (Main.py) to use it.
