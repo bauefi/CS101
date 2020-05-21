@@ -1,0 +1,6 @@
+### Exercise 1 ###
+
+Write a program which outputs its own python source code to a new file called
+copied_exercise.py. The source code is all the code which is written in a file.
+The file copied_exercise.py needs to be executable and produce exactly the same
+behaviour. 

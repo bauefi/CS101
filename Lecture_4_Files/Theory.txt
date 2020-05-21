@@ -1,0 +1,18 @@
+### 4.1. Why use files? ###
+All the programs we have looked at so far use input only from the keyboard,
+and output only to the screen. If we were restricted to use only the keyboard
+and screen as input and output devices, it would be difficult to handle large
+amounts of input data, and output data would always be lost as soon as we turned
+the computer off. To avoid these problems, we can store data in some secondary
+storage device, usually discs. Data can be created by one program, stored on
+these devices, and then accessed or modified by other programs when necessary.
+To achieve this, the data is packaged up on the storage devices as
+data structures called files.
+
+### 4.1. Reading from a file ###
+This is a fairly simple topic in Python, try and google how it works as you solve
+the exercises.
+
+### 4.1. Writing to a file ###
+This is a fairly simple topic in Python, try and google how it works as you solve
+the exercises.

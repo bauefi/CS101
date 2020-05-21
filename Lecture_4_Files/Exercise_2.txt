@@ -1,0 +1,4 @@
+### Exercise 2 ###
+
+Without using an array (we will learn about arrays in Lecture 6), write a
+program that prints itself out backwards on the screen.
